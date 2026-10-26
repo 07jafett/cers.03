@@ -1,0 +1,1147 @@
+/* CSS limpio: sustituye por completo style.css. Imagen: img/institucion.png */
+/* CSS corregido - Complejo Educativo Refugio Sifontes
+   Coloca la fotografía en img/institucion.png
+   y el escudo en img/logo.jpeg */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --azul: #80caff;
+  --azul-oscuro: #08172e;
+  --celeste: #45bbff;
+  --texto: #edf6ff;
+  --gris: #bed0e5;
+  --fondo: #07162d;
+  --blanco: #ffffff;
+  --cristal: rgba(255,255,255,.09);
+  --borde-cristal: rgba(255,255,255,.22);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--blanco);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ENCABEZADO */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 3px 18px rgba(0,0,0,.07);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--azul);
+  font-weight: 800;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.logo-icono {
+  background: var(--azul);
+  color: white;
+  padding: 9px 12px;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+nav a {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texto);
+  transition: color .3s;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: var(--celeste);
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: var(--azul);
+  cursor: pointer;
+}
+
+/* PORTADA - FOTO DE LA INSTITUCIÓN Y GLASS */
+
+.hero h1 {
+  max-width: 950px;
+  font-size: clamp(35px, 5vw, 67px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  display: block;
+  color: #55c5ff;
+}
+
+.etiqueta {
+  display: inline-block;
+  color: #8cddff;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  max-width: 650px;
+  font-size: 17px;
+  color: #e1e9f7;
+  margin-bottom: 30px;
+}
+
+.hero-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--celeste);
+  padding: 14px 25px;
+  border-radius: 9px;
+  color: white;
+  font-weight: 600;
+  transition: .3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #1687ca;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid white;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,.15);
+}
+
+/* SECCIONES */
+
+.seccion {
+  padding: 90px 7%;
+}
+
+.fondo {
+  background: var(--fondo);
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.subtitulo {
+  color: #1689c7;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: clamp(27px, 4vw, 39px);
+  color: var(--azul-oscuro);
+  margin: 10px 0 18px;
+  line-height: 1.3;
+}
+
+.descripcion {
+  max-width: 800px;
+  color: var(--gris);
+  margin-bottom: 36px;
+}
+
+/* TARJETAS */
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.tarjetas.dos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tarjeta {
+  min-width: 0;
+  background: white;
+  padding: 32px;
+  border: 1px solid #e7edf6;
+  border-radius: 17px;
+  box-shadow: 0 8px 25px rgba(13,46,90,.05);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(13,46,90,.12);
+}
+
+.emoji {
+  font-size: 39px;
+  margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+  font-size: 20px;
+  color: var(--azul);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.tarjeta p {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+/* BACHILLERATOS */
+
+.carrera {
+  border-top: 4px solid var(--celeste);
+}
+
+.duracion {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 6px 14px;
+  background: #e6f5ff;
+  color: var(--azul);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.enlace {
+  display: block;
+  margin-top: 15px;
+  color: var(--azul);
+  font-weight: 700;
+}
+
+/* ESPECIALIDAD ITSI */
+
+.numero {
+  font-size: 45px;
+  font-weight: 800;
+  color: var(--celeste);
+}
+
+.tarjeta ul {
+  padding-left: 20px;
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.tarjeta li {
+  margin-bottom: 10px;
+}
+
+.nota {
+  margin-top: 25px;
+  font-size: 12px;
+  color: var(--gris);
+}
+
+/* DOCENTES */
+
+.docentes-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.docente {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.docente-foto {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d9ecff, #a6d7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  margin: 0 auto 20px;
+  border: 4px solid white;
+  box-shadow: 0 5px 18px rgba(0,0,0,.1);
+}
+
+.docente h3 {
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+/* GALERÍA */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.foto {
+  min-height: 230px;
+  background: linear-gradient(135deg, #dae9f8, #b8d6f1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  color: var(--azul);
+  font-weight: 600;
+}
+
+/* CONTACTO Y UBICACIÓN */
+
+.contacto {
+  text-align: center;
+  background: #eaf4fe;
+}
+
+.centrado {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ubicacion-card {
+  max-width: 650px;
+  background: white;
+  padding: 45px 25px;
+  margin: 30px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.ubicacion-icono {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.ubicacion-card h3 {
+  font-size: 24px;
+  color: var(--azul);
+  margin-bottom: 12px;
+}
+
+.ubicacion-card p {
+  margin: 10px auto 25px;
+  color: var(--gris);
+  max-width: 450px;
+}
+
+.contacto-datos {
+  margin-top: 30px;
+}
+
+.contacto-datos a {
+  color: var(--azul);
+  font-weight: 600;
+}
+
+.contacto-datos a:hover {
+  text-decoration: underline;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+  background: var(--azul-oscuro);
+  text-align: center;
+  padding: 27px;
+  color: white;
+  font-size: 13px;
+}
+
+/* TABLETAS Y MENÚ MÓVIL */
+
+@media (max-width: 1100px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: white;
+    padding: 12px 6%;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    max-height: calc(100vh - 75px);
+    overflow-y: auto;
+  }
+
+  nav.activo {
+    display: flex;
+  }
+
+  nav a {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .docentes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .tarjetas,
+  .galeria {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tarjetas.dos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TELÉFONOS */
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 70px 7%;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-botones {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seccion {
+    padding: 65px 6%;
+  }
+
+  .tarjetas,
+  .tarjetas.dos,
+  .docentes-grid,
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta {
+    padding: 26px;
+  }
+
+  .ubicacion-card {
+    padding: 30px 18px;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--celeste);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .tarjeta,
+  .btn {
+    transition: none;
+  }
+}
+
+/* LOGOTIPO INSTITUCIONAL */
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .logo-img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* =========================================
+   REFUGIO SIFONTES - GLASSMORPHISM
+   ========================================= */
+
+
+body {
+  color: var(--texto);
+  background:
+    radial-gradient(
+      ellipse at 15% 25%,
+      rgba(0, 122, 255, .25),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 65%,
+      rgba(0, 195, 255, .13),
+      transparent 40%
+    ),
+    #07162d;
+}
+
+/* MENÚ DE CRISTAL */
+
+.header {
+  background: rgba(8, 23, 46, 0.67);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-bottom: 1px solid var(--borde-cristal);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
+}
+
+.logo,
+nav a {
+  color: #fff;
+}
+
+.logo-icono {
+  background: rgba(255,255,255,.14);
+}
+
+.logo-img {
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.35);
+  box-shadow: 0 0 20px rgba(69,187,255,.25);
+}
+
+nav a:hover {
+  color: #60d5ff;
+}
+
+.menu-btn {
+  color: white;
+}
+
+/* PORTADA: UNA SOLA FOTO, SIN FILTROS QUE LA TAPEN */
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 90px 8%;
+  color: #fff;
+  background-color: #081c3c;
+  background-image: url("./img/institucion.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Si se usa una imagen HTML dentro de .hero, también se muestra */
+.hero-foto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero::before, .hero::after { content: none; }
+
+.hero-contenido {
+  width: 100%;
+  max-width: 870px;
+  padding: 45px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 26px;
+  background: rgba(6, 22, 48, 0.28);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+}
+
+.hero h1 span {
+  color: #75d9ff;
+}
+
+.hero p {
+  color: #e7f2ff;
+}
+
+/* SECCIONES */
+
+.seccion {
+  background: transparent;
+}
+
+.seccion.fondo {
+  background: rgba(11, 37, 73, .35);
+}
+
+.subtitulo {
+  color: #56caff;
+}
+
+h2 {
+  color: #fff;
+}
+
+.descripcion,
+.nota {
+  color: var(--gris);
+}
+
+/* TARJETAS GLASS */
+
+.tarjeta {
+  background: var(--cristal);
+  border: 1px solid var(--borde-cristal);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 22px;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, .16),
+    inset 0 1px 0 rgba(255,255,255,.15);
+  transition: .35s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-9px);
+  background: rgba(255,255,255,.15);
+  border-color: rgba(100,213,255,.65);
+  box-shadow: 0 20px 45px rgba(0,0,0,.25);
+}
+
+.tarjeta h3,
+.docente h3 {
+  color: #e3f5ff;
+}
+
+.tarjeta p,
+.tarjeta ul {
+  color: #ccdbef;
+}
+
+.carrera {
+  border-top: 2px solid #4acaff;
+}
+
+.duracion {
+  color: #c7edff;
+  background: rgba(69,187,255,.18);
+  border: 1px solid rgba(69,187,255,.25);
+}
+
+.numero,
+.enlace {
+  color: #63d0ff;
+}
+
+/* BOTONES DE CRISTAL */
+
+.btn {
+  background: rgba(69,187,255,.22);
+  border: 1px solid rgba(120,220,255,.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: white;
+  box-shadow: 0 6px 24px rgba(0,125,255,.15);
+}
+
+.btn:hover {
+  background: rgba(69,187,255,.42);
+  box-shadow: 0 10px 35px rgba(0,160,255,.25);
+}
+
+.btn-outline {
+  background: rgba(255,255,255,.08);
+}
+
+/* DOCENTES */
+
+.docente-foto {
+  background: rgba(255,255,255,.15);
+  border: 2px solid rgba(255,255,255,.3);
+  box-shadow: 0 5px 25px rgba(0,180,255,.15);
+}
+
+/* GALERÍA */
+
+.foto {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.15),
+      rgba(255,255,255,.04)
+    );
+  border: 1px solid var(--borde-cristal);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #e8f6ff;
+  box-shadow: 0 8px 28px rgba(0,0,0,.13);
+}
+
+/* CONTACTO Y UBICACIÓN */
+
+.contacto {
+  background: rgba(12, 46, 85, .45);
+}
+
+.ubicacion-card {
+  background: rgba(255,255,255,.09);
+  border: 1px solid var(--borde-cristal);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 15px 45px rgba(0,0,0,.2);
+}
+
+.ubicacion-card h3 {
+  color: white;
+}
+
+.ubicacion-card p {
+  color: #d0e4fa;
+}
+
+.contacto-datos a {
+  color: #80d9ff;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+  background: rgba(3, 13, 30, .85);
+  border-top: 1px solid var(--borde-cristal);
+}
+
+/* MENÚ MÓVIL */
+
+@media (max-width: 1100px) {
+  nav {
+    background: rgba(7, 23, 47, .97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  nav a {
+    color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 570px;
+    padding: 60px 5%;
+  }
+
+  .hero-contenido {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(29px, 8vw, 43px);
+  }
+}
+
+
+/* CENTRAR CONTENIDO DE LA PORTADA */
+
+.hero {
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .hero-contenido {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* CENTRAR EL TÍTULO */
+
+.hero h1 {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 span {
+  display: block;
+  text-align: center;
+}
+
+/* CENTRAR LA DESCRIPCIÓN */
+
+.hero p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CENTRAR LOS BOTONES */
+
+.hero-botones {
+  justify-content: center;
+}
+
+/* AJUSTAR FOTO DE ESTUDIANTES AL CUADRO */
+
+.foto-estudiantes {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  padding: 0 !important;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.foto-estudiantes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* TÍTULO SOBRE LA FOTO */
+
+.foto-titulo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.75)
+  );
+  text-align: center;
+}
+
+.foto-titulo h3 {
+  color: white;
+  font-size: 17px;
+}
+
+/* MÓDULOS ITSI - DISEÑO GLASS */
+
+.modulos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.modulo-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 22px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: transform 0.3s ease;
+}
+
+.modulo-card:hover {
+  transform: translateY(-7px);
+  border-color: #65ccff;
+}
+
+.modulo-card .numero {
+  font-size: 45px;
+  color: #65ccff;
+  font-weight: 800;
+}
+
+.modulo-card h3 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.modulo-cantidad {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(69, 187, 255, 0.2);
+  color: #91dcff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.modulo-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modulo-card li {
+  padding: 12px 0 12px 22px;
+  position: relative;
+  color: #d2e3f5;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modulo-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #65ccff;
+  font-weight: bold;
+}
+
+.modulo-card li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1050px) {
+  .modulos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .modulos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FOTO DE PROYECTOS EN GALERÍA */
+
+.foto-proyecto {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.foto-proyecto img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.foto-proyecto:hover img {
+  transform: scale(1.06);
+}
+
+.foto-proyecto .foto-titulo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.8)
+  );
+  text-align: center;
+}
+
+.foto-proyecto .foto-titulo h3 {
+  color: white;
+  font-size: 17px;
+}
+
+/* ORGANIZAR GALERÍA Y UBICACIÓN */
+
+#galeria,
+#contacto {
+  display: block;
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+#galeria .contenedor,
+#contacto .contenedor {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GALERÍA CON DOS FOTOGRAFÍAS */
+
+#galeria .galeria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* FOTOS AJUSTADAS */
+
+#galeria .foto {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#galeria .foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* TÍTULOS DE FOTOGRAFÍAS */
+
+#galeria .foto-titulo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+#galeria .foto-titulo h3 {
+  color: white;
+  font-size: 18px;
+}
+
+/* UBICACIÓN DEBAJO DE LA GALERÍA */
+
+#contacto {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+#contacto .descripcion {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ADAPTACIÓN PARA TELÉFONOS */
+
+@media (max-width: 700px) {
+  #galeria .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  #galeria .foto {
+    height: 260px;
+  }
+
+  #contacto {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+/* CORREGIR ESPACIO DEBAJO DE LOS MÓDULOS ITSI */
+
+#itsi {
+  padding-bottom: 50px;
+}
+
+#itsi .modulos-grid {
+  margin-bottom: 20px;
+}
+
+#itsi .nota {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 0;
+  text-align: left;
+  font-size: 13px;
+  color: #bed0e5;
+}
+
+/* SEPARACIÓN CON DOCENTES */
+
+#docentes {
+  padding-top: 65px;
+}
+
+/* TARJETAS */
+
+#itsi .modulo-card {
+  height: auto;
+  min-height: 0;
+}
